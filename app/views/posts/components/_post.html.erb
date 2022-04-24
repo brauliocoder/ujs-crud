@@ -1,0 +1,14 @@
+<div class="post" id="post-<%= post.id %>" >
+  <div class="post-header">
+    <h3 class="post-title"><%= post.title %></h3>
+    <div class="post-actions">
+      <%= link_to 'Show', post %>
+      <%= link_to 'Edit', edit_post_path(post) %>
+      <%= link_to 'Destroy', post, method: :delete, remote: true, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div>
+  <div class="post-content">
+    <p><%= post.content %></p>
+    <small class="post-date"><%= post.updated_at %></small>
+  </div>
+</div>

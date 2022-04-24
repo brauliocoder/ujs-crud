@@ -21,15 +21,18 @@ class PostsController < ApplicationController
 
   # POST /posts or /posts.json
   def create
+    sleep 1.5
     @post = Post.new(post_params)
 
     respond_to do |format|
       if @post.save
         format.html { redirect_to post_url(@post), notice: "Post was successfully created." }
         format.json { render :show, status: :created, location: @post }
+        format.js
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -52,8 +55,8 @@ class PostsController < ApplicationController
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: "Post was successfully destroyed." }
       format.json { head :no_content }
+      format.js
     end
   end
 

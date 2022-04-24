@@ -1,0 +1,2 @@
+document.querySelector('#post-box').innerHTML = "<%= escape_javascript( render 'posts/components/new-post' ) %>";
+document.querySelector('#my-posts').insertAdjacentHTML("afterbegin", "<%= escape_javascript( render 'posts/components/post', post: @post ) %>");
