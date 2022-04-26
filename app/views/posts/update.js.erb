@@ -1,0 +1,2 @@
+document.querySelector(".modal-title").textContent = "Showing Post"
+document.querySelector('.modal-body').innerHTML = "<%= escape_javascript( render 'posts/components/modal_post', post: @post ) %>";

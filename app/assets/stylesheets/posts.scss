@@ -8,7 +8,6 @@
 }
 
 .post {
-  max-width: 650px;
   border: 1px solid gray;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -26,7 +25,6 @@
 }
 
 .post-content p {
-  margin: 0rem 1rem;
   margin-bottom: 0.25rem;
 }
 
@@ -34,4 +32,13 @@
   display: block;
   text-align: end;
   color: gray;
+}
+
+.text-area {
+  min-height: 250px;
+}
+
+.short-container {
+  max-width: 750px;
+  margin: auto;
 }

@@ -11,6 +11,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'posts/components/navbar' %>
+    <div class="short-container">
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,0 +1,2 @@
+document.querySelector(".modal-title").textContent = "Editing Post"
+document.querySelector('.modal-body').innerHTML = "<%= escape_javascript( render 'form', post: @post ) %>";

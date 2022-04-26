@@ -1,0 +1,3 @@
+<% posts.order(updated_at: :desc).each do |post| %>
+  <%= render 'posts/components/post', post: post %>
+<% end %>

@@ -1,9 +1,9 @@
 <div class="post" id="post-<%= post.id %>" >
   <div class="post-header">
-    <h3 class="post-title"><%= post.title %></h3>
+    <h5 class="post-title"><%= post.title %></h5>
     <div class="post-actions">
-      <%= link_to 'Show', post %>
-      <%= link_to 'Edit', edit_post_path(post) %>
+      <%= link_to 'Show', post, remote: true, :data => { :'bs-toggle' => 'modal',  :'bs-target' => '#staticBackdrop'} %>
+      <%= link_to 'Edit', edit_post_path(post), remote: true, :data => { :'bs-toggle' => 'modal',  :'bs-target' => '#staticBackdrop'} %>
       <%= link_to 'Destroy', post, method: :delete, remote: true, data: { confirm: 'Are you sure?' } %>
     </div>
   </div>
